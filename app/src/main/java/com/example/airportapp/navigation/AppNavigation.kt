@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.airportapp.screens.LoginScreen
 import com.example.airportapp.screens.SignUpScreen
+import com.example.airportapp.screens.SplashScreen
 
 @Composable
 fun AppNavigation(){
@@ -17,6 +18,9 @@ fun AppNavigation(){
         }
         composable("sign up"){
             SignUpScreen(navController)
+        }
+        composable ("splash screen"){
+            SplashScreen(navController)
         }
     }
 }

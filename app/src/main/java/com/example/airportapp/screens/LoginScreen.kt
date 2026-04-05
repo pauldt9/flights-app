@@ -27,6 +27,7 @@ import com.example.airportapp.components.CustomImput
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextDecoration
@@ -66,7 +67,7 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "Bienvenido\n a bordo",
+                stringResource(R.string.msg_welcome),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 32.sp,
@@ -78,9 +79,9 @@ fun LoginScreen(navController: NavController){
             var password by remember { mutableStateOf("") }
 
             CustomImput(
-                "Correo",
+                stringResource(R.string.label_email),
                 email,
-                "fedep@gmail.com",
+                stringResource(R.string.hint_email),
                 {email = it},
                 false
             )
@@ -88,9 +89,9 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(5.dp))
 
             CustomImput(
-                "Contraseña",
+                stringResource(R.string.label_password),
                 password,
-                "**********",
+                stringResource(R.string.hint_password),
                 {password = it},
                 true
             )
@@ -98,7 +99,7 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(5.dp))
 
             Text(
-                text = "Recuperar contraseña",
+                stringResource(R.string.label_forgot_password),
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Normal,
                 lineHeight = 15.sp,
@@ -109,18 +110,24 @@ fun LoginScreen(navController: NavController){
 
             Spacer(modifier = Modifier.height(55.dp))
 
-            CustomButton("Entrar", Color(0xFFE52D71), Color.White,{})
+            CustomButton(
+                stringResource(R.string.btn_login),
+                Color(0xFFE52D71),
+                Color.White,
+                {}
+            )
 
             Spacer(modifier = Modifier.height(15.dp))
 
-            CustomButton("Crear cuenta",
+            CustomButton(
+                stringResource(R.string.btn_create_account),
                 Color(0xFFCCCCCC),
                 Color(0xFF535353)
             ) { navController.navigate("sign up") }
         }
 
         Text(
-            text = "Intercontinental Airlines",
+            stringResource(R.string.app_title),
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = 75.dp),

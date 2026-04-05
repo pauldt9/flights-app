@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">AirportApp</string>
+    <string name="app_title">App de vuelos</string>
+
+    <string name="btn_login">Entrar</string>
+    <string name="btn_sign_up">Registrarse</string>
+    <string name="btn_create_account">Crear una cuenta</string>
+    <string name="btn_already_have_account">Ya tengo una cuenta</string>
+
+    <string name="label_name">Nombre Completo</string>
+    <string name="label_email">Correo</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_confirm_password">Confirmar Contraseña</string>
+    <string name="label_forgot_password">Recuperar contraseña</string>
+
+    <string name="label_terms_agreement">
+        Al registrarte, aceptas los términos y condiciones
+        \nde la aerolínea. Si quieres conocer mas a detalle sobre
+        \nel manejo de tus datos, haz clic aqui.
+    </string>
+
+    <string name="hint_name">Juan Perez</string>
+    <string name="hint_email">fedep@gmail.com</string>
+    <string name="hint_password">**********</string>
+
+    <string name="msg_welcome">Bienvenido\na bordo</string>
+    <string name="title_register">Regístrate</string>
 </resources>

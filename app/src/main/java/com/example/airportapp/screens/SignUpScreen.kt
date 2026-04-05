@@ -27,6 +27,8 @@ import com.example.airportapp.components.CustomImput
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.stringResource
+import com.example.airportapp.R
 import com.example.airportapp.components.CustomButton
 
 @Composable
@@ -62,7 +64,7 @@ fun SignUpScreen(navController: NavController){
             Spacer(modifier = Modifier.height(20.dp))
 
             Text(
-                text = "Regístrate",
+                stringResource(R.string.title_register),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.ExtraBold,
                 lineHeight = 32.sp,
@@ -78,17 +80,17 @@ fun SignUpScreen(navController: NavController){
             var confirmPassword by remember { mutableStateOf("") }
 
             CustomImput(
-                "Nombre Completo",
+                stringResource(R.string.label_name),
                 name,
-                "Juan Perez",
+                stringResource(R.string.hint_name),
                 {name = it},
                 false
             )
 
             CustomImput(
-                "Correo",
+                stringResource(R.string.label_email),
                 email,
-                "fedep@gmail.com",
+                stringResource(R.string.hint_email),
                 {email = it},
                 false
             )
@@ -96,17 +98,17 @@ fun SignUpScreen(navController: NavController){
             Spacer(modifier = Modifier.height(5.dp))
 
             CustomImput(
-                "Contraseña",
+                stringResource(R.string.label_password),
                 password,
-                "**********",
+                stringResource(R.string.hint_password),
                 {password = it},
                 true
             )
 
             CustomImput(
-                "Confirmar Contraseña",
+                stringResource(R.string.label_confirm_password),
                 confirmPassword,
-                "**********",
+                stringResource(R.string.hint_password),
                 {confirmPassword = it},
                 true
             )
@@ -114,7 +116,7 @@ fun SignUpScreen(navController: NavController){
             Spacer(modifier = Modifier.height(55.dp))
 
             CustomButton(
-                "Registrarse",
+                stringResource(R.string.btn_sign_up),
                 Color(0xFFE52D71),
                 Color.White,
                 {}
@@ -122,16 +124,15 @@ fun SignUpScreen(navController: NavController){
 
             Spacer(modifier = Modifier.height(15.dp))
 
-            CustomButton("Ya tengo una cuenta",
+            CustomButton(
+                stringResource(R.string.btn_already_have_account),
                 Color(0xFFCCCCCC),
                 Color(0xFF535353)
             ) { navController.navigate("login") }
         }
 
         Text(
-            text = "Al registrarte, aceptas los términos y condiciones" +
-                    "\nde la aerolínea. Si quieres conocer mas a detalle sobre" +
-                    "\nel manejo de tus datos, haz clic aqui.",
+            stringResource(R.string.label_terms_agreement),
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = 45.dp),
